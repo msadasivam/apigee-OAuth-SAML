@@ -5,6 +5,8 @@ In this implementation Apigee acts as an authorization server issuing client cre
 
 This achieves the same objective as [Using SAML Assertions as Authorization Grants](https://tools.ietf.org/html/rfc7522#section-2.1) however the OAuth interaction and the grant_type are different.
 
+![Sequence Diagram svg](docs/images/Apigee-SAML-Integration.svg?raw=true "Apigee OAuth and SAML")
+
 ## Install
  * Create KVM
      - KVMGetSAMLConfig
