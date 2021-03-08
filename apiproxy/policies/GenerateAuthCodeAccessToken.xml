@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 name="GenerateAuthCodeAccessToken">
+    <Operation>GenerateAccessToken</Operation>
+    <ExpiresIn>86400000</ExpiresIn>
+    <!-- 3600000ms = 1 hour -->
+    <RefreshTokenExpiresIn>86400000</RefreshTokenExpiresIn>
+    <!--default value in milliseconds-->
+    <SupportedGrantTypes>
+        <GrantType>authorization_code</GrantType>
+    </SupportedGrantTypes>
+    <GrantType>request.formparam.grant_type</GrantType>
+    <GenerateResponse enabled="false"/>
+    <DisplayName>GenerateAuthCodeAccessToken</DisplayName>
+</OAuthV2>

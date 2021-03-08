@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AssignAuthCodeAccessTokenResponse" version="SHA-512:2f8dc4762ad84ebe8affeb7a0659d58e2321e0c0ba8870120d3657e19e6c72126a39bb38ab6308e89be80cc245d0cf94aed8f4c594726468161689e99fb0e206"/>
+        <VersionInfo resourceName="AssignClientCredentialsAccessTokenResponse" version="SHA-512:f97eb3b1cbf767ec7702b18c5d9a34d26d98b6897e9fc6acc1ff85f459de60122a4f6681357be07b4b7a3b6fba90816e7c467dc9e69656a74f862357298972c8"/>
+        <VersionInfo resourceName="AssignLoginRedirect" version="SHA-512:d27131b31a63fc6e2a52bd0559ed63c3ad989d222c4c250f058dd3cef30a417eec0d9f3fe12d318eef72e968a1c1766c57db5e3cf1c4c655738a918f45791505"/>
+        <VersionInfo resourceName="AssignRefreshTokenResponse" version="SHA-512:90c6f90f36fe10cd741b4a083729f8ae5fc3f9b1147cbd82e1f5baa5692b5a7188f9596df34d48683922e48bb1a58e9ef809669b35bfbda6c0f0cd9fd9b6a235"/>
+        <VersionInfo resourceName="ExtractSAMLData" version="SHA-512:692ac0da598fabc8ecfd1f0cf5cc1a4405cbaa4bb83fdb21c5885b65a29ce93ccd5126ffa002df8c54d2b6b7e4549a1b1ebefafb2f3c6105a507e6cdc2cddfd7"/>
+        <VersionInfo resourceName="FaultInvalidRequest" version="SHA-512:c3e568abf68390e425ac0cad02e2df593bf83bf124fc776166b083433fb175140a36ceba942700b9a754524a4ba935a6c03ce18cc64fc50bc75a5825766b520c"/>
+        <VersionInfo resourceName="FaultUnauthorized" version="SHA-512:b982ce87b259fe111325a5dfb1fc57a69229ef8a70aff149bfb7708efb8681546670e7ef02759cff84f94f2f09101b56260ca0492621677e494bdedcf9b476db"/>
+        <VersionInfo resourceName="GenerateAuthCodeAccessToken" version="SHA-512:eb6117869abaa351d6dd9186f5243135fdb11e97e5647ecce517ec3d62f7dbf9dee6ad75f17696d3e7767c7f65066e43da181452a874e14e896ec4fde2e9d49e"/>
+        <VersionInfo resourceName="GenerateAuthorizationCode" version="SHA-512:ec89d972fb9f5465e7be2ec6973845ef6fdadaf4aaa16bf4e7f606d15676d737fba6a48ff158121b22ba76e4a3477089f502ae76e1a82ae9fe621fea711aee1b"/>
+        <VersionInfo resourceName="GenerateClientCredentialsAccessToken" version="SHA-512:b4ce8570af0bd255cda9a3c47496dee8edea2d46d5c201cb85c43f92fe215c7d8a18355839485a764a2b46c95e8df1396970552c1617ac890630ff260c9b3912"/>
+        <VersionInfo resourceName="GenerateImplicitAccessToken" version="SHA-512:00859bc6374cd77ab1da8dff97bc044e2ef5ff2554303e13fc0a6d4f8514c4fa0c3619036053dde4dadfe8fc86676b74e9f9fa983340dce6f4ee42794d074ef2"/>
+        <VersionInfo resourceName="JSDecodeSAML" version="SHA-512:06e301799d0b72578809260c7ffc31994e1256ddb91ed8b03b8dff9415251fb67d8935a72227c0b191bf4d2ea878506d44a3d52ac2a2d6e17c5786e3c9abb9ce"/>
+        <VersionInfo resourceName="JSIssueInstant" version="SHA-512:7eecd89d1b54b4bad588a2729664d44c77e0b25d0aff8fc1db746a2dab2ae90347fe0274319942d38001490ceca3bbe83d6f916e496dfcfcdba535d74cc74402"/>
+        <VersionInfo resourceName="JSParseSAMLState" version="SHA-512:acf44b8ea4b9312b518727cf34a9d573a52300063512d9edad7bfccb5126e017c34a6eaedf6b335f94b8d06a9b9c2d9826496fe80dc2cc115a8dcb06f6ef9418"/>
+        <VersionInfo resourceName="JSReqID" version="SHA-512:bf2ca0e8ea74a4927557107b76123f2e42b22e87c2d6c1442870342bd5f1ce809fed9b2eeadc38db6f5983a585c076a2cfb6fbb4d3c95fe07696312a5afa886b"/>
+        <VersionInfo resourceName="JavaEncodeSAML" version="SHA-512:39655e8f1ae2a285dc50c31d07c519ee6d304b2f5957b89f42e21af2b7b8179ef7f1b2438308be73c2694011da295933f266ef8b6ea14521af2b52a46c91f3df"/>
+        <VersionInfo resourceName="KVMGetSAMLConfig" version="SHA-512:e7ec49bdb9f1ccdd7eed0fd26b8e7e2d1e52ea5d111e12543de15d6b4b646ef38678b94c9f291830091e016c53bc64c73d4989ea2983bb104d9781ce49d769a3"/>
+        <VersionInfo resourceName="LookupCacheSAMLState" version="SHA-512:84574cd8284210003da450452ffba19bc17bf721d02a940bb2b4b3edc1acf1e25a7d5353814602404ad993536706af77ac0ac621d96db51e94a52ed4d493e36c"/>
+        <VersionInfo resourceName="PopulateCacheSAMLState" version="SHA-512:7a866797c76b22f127c30e4a93c255c64997ae04445096825453ba71302c4dc76a9f7e8b9dbb117e10bd79c6cf0624283c8b2f1ed350a4bb2aa8ea823676d682"/>
+        <VersionInfo resourceName="Quota" version="SHA-512:638a0dd791f60bbeba7583ac892663fc583c41d7385ac21e50b3b33505ca600cca75f121f58c768072d4ee4ab6e9948a5c167b7ec5e15e963f45d76e386be036"/>
+        <VersionInfo resourceName="RefreshAccessToken" version="SHA-512:f37c7e7d4ff347d54067fbfca9d484863f1e4659db59375954c83d3bcee6b431fb5f92894cdd7e4764a6071a6a557a38562eaa45717b35a631ead3f2de8748ad"/>
+        <VersionInfo resourceName="SpikeArrest" version="SHA-512:95b58e20c09b121dccf4ffc154b902edf28dc9e4fd1c73896e8e036968de9d04d471c32ce54e513160f772df65c7ef7056f0b5faac27350efe2127926d71cca8"/>
+        <VersionInfo resourceName="ValidateSAML" version="SHA-512:6a78a1280647643e8cc21f3aee469ec90623ec6404fba4f4ef21facb18bd2e3828e6ab45e76338b8ab80c3fa3dbcb5c8522ed924cb2e4951b1264443d1fcd917"/>
+        <VersionInfo resourceName="VerifyClientID" version="SHA-512:fc1061e1f8ad53367eb6b07cc5f53c35de73c30cd7914f2f039c6b3a30524bb2fb99824290422cf9f989c2e66a81d225f4fdbc32ff030dbce2d8ffccf1a71000"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="OAuth20" version="SHA-512:1bdceb6bd7dec295c1ca3f5306757bb76a3684ad5398802983acd47ae17f76651db8e6e6af3423ed53b6339881e29d1320d56d5a62e10f1cd87748af18592a18"/>
+        <VersionInfo resourceName="default" version="SHA-512:48acf19643f05fa2cb9543c9bd94e02b7cde4d39d4ddb364df27991e2d85a0767fc063e297594128dfbfe2f576000e2754d8ea61b4cfe4eed2b8c60253862648"/>
+    </ProxyEndpoints>
+    <Resources>
+        <VersionInfo resourceName="java://EncodeSAML.jar" version="SHA-512:fdbd51616660a6a9a322a9584fa063b2b9e620a308bb51fc53013be8c87ce4086c762aeb7b73c2a0e824adb7bb3a1ea0593b8dc121e814284c4093c7450105cb"/>
+        <VersionInfo resourceName="jsc://JSIssueInstant.js" version="SHA-512:d9d9123c42ff268d7c30bb02ab1ad90d48b7d0d2e6eade08c347a477f8781d1b40b11ba0d748dcde3e7fb895ac246076cbf85d6465af15436e529cd6b00e4535"/>
+        <VersionInfo resourceName="jsc://JSParseSAMLState.js" version="SHA-512:09e27492b79a3b2acf733882bdbe56dca28ca106673b70c85311cabc313532ff6d639222c6429759c54c03c310cdaf6aec7d24c48ff40b0064a6a6abc603b657"/>
+        <VersionInfo resourceName="jsc://JSReqID.js" version="SHA-512:78e17cd1b6e38b91eea88c4aebbcfbf92bb39b26182e972e795690a0809e2d11bd9513e50f4f7cf3681a87268725766d0a964e6160b758536db81730946d1265"/>
+        <VersionInfo resourceName="jsc://base64.js" version="SHA-512:1810e0d9a70f28612a44011a8a52f50c13921be9020ae3479af25b626a30d04808c7115a84e7923e94cb75bf179f57c6e5b8ed6c7c49176e7d79125ba88aa311"/>
+        <VersionInfo resourceName="jsc://decodeSAML.js" version="SHA-512:1d54f603623d0d278a55de2a9ceb05118547b39d93d917a2caf3ae5589ec23233495b7ef61bf4ebd90b0b169f7cab19c87765c07baabd47ee46c54bd24baf2ad"/>
+    </Resources>
+    <SharedFlows/>
+    <TargetEndpoints/>
+</Manifest>

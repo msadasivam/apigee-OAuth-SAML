@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 name="GenerateAuthorizationCode">
+    <Operation>GenerateAuthorizationCode</Operation>
+    <ResponseType>authzparams.response_type</ResponseType>
+    <ClientId>authzparams.client_id</ClientId>
+    <RedirectUri>authzparams.redirect_uri</RedirectUri>
+    <Scope>authzparams.scope</Scope>
+    <State>authzparams.state</State>
+    <AppEndUser>samlresp.emailaddress</AppEndUser>
+    <GenerateResponse enabled="true"/>
+</OAuthV2>

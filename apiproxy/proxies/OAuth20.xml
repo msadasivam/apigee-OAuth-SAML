@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="OAuth20">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>SpikeArrest</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <Flow name="authorize">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>VerifyClientID</Name>
+                </Step>
+                <Step>
+                    <Name>Quota</Name>
+                </Step>
+                <Step>
+                    <Name>KVMGetSAMLConfig</Name>
+                </Step>
+                <Step>
+                    <Name>JSReqID</Name>
+                </Step>
+                <Step>
+                    <Name>PopulateCacheSAMLState</Name>
+                </Step>
+                <Step>
+                    <Name>JSIssueInstant</Name>
+                </Step>
+                <Step>
+                    <Name>JavaEncodeSAML</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>AssignLoginRedirect</Name>
+                </Step>
+            </Response>
+            <Condition>proxy.pathsuffix MatchesPath "/authorize" and request.verb = "GET"</Condition>
+        </Flow>
+        <Flow name="token">
+            <Request>
+                <Step>
+                    <Name>GenerateAuthCodeAccessToken</Name>
+                    <Condition>request.formparam.grant_type = "authorization_code"</Condition>
+                </Step>
+                <Step>
+                    <Name>GenerateClientCredentialsAccessToken</Name>
+                    <Condition>request.formparam.grant_type = "client_credentials"</Condition>
+                </Step>
+                <Step>
+                    <Name>RefreshAccessToken</Name>
+                    <Condition>request.formparam.grant_type = "refresh_token"</Condition>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>AssignAuthCodeAccessTokenResponse</Name>
+                    <Condition>request.formparam.grant_type = "authorization_code" and oauthv2accesstoken.GenerateAuthCodeAccessToken.access_token != null</Condition>
+                </Step>
+                <Step>
+                    <Name>AssignClientCredentialsAccessTokenResponse</Name>
+                    <Condition>request.formparam.grant_type = "client_credentials" and oauthv2accesstoken.GenerateClientCredentialsAccessToken.access_token != null</Condition>
+                </Step>
+                <Step>
+                    <Name>AssignRefreshTokenResponse</Name>
+                    <Condition>request.formparam.grant_type = "refresh_token" and oauthv2accesstoken.RefreshAccessToken.access_token != null</Condition>
+                </Step>
+            </Response>
+            <Condition>proxy.pathsuffix MatchesPath "/token" and request.verb = "POST"</Condition>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/oauth20/v1</BasePath>
+        <Properties/>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="noroute"/>
+</ProxyEndpoint>

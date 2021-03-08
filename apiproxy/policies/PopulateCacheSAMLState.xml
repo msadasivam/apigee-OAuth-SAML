@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PopulateCache async="false" continueOnError="false" enabled="true" name="PopulateCacheSAMLState">
+    <CacheKey>
+        <Prefix/>
+        <KeyFragment ref="samlinfo.id"/>
+    </CacheKey>
+    <CacheResource>SAMLState</CacheResource>
+    <Scope>Application</Scope>
+    <ExpirySettings>
+        <TimeoutInSec>7200</TimeoutInSec>
+    </ExpirySettings>
+    <Source>samlinfo.state</Source>
+</PopulateCache>

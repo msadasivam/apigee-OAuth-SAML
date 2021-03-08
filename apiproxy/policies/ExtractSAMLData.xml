@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="ExtractSAMLData">
+    <Source clearPayload="false">request</Source>
+    <XMLPayload stopPayloadProcessing="false">
+        <Namespaces>
+            <Namespace prefix="p">urn:oasis:names:tc:SAML:2.0:protocol</Namespace>
+            <Namespace prefix="a">urn:oasis:names:tc:SAML:2.0:assertion</Namespace>
+            <Namespace prefix="ds">http://www.w3.org/2000/09/xmldsig#</Namespace>
+        </Namespaces>
+        <Variable name="samlresp.emailaddress" type="string">
+            <XPath>/p:Response/a:Assertion/a:AttributeStatement/a:Attribute[@Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"]/a:AttributeValue</XPath>
+        </Variable>
+        <Variable name="samlresp.audience" type="string">
+            <XPath>/p:Response/a:Assertion/a:Conditions/a:AudienceRestriction/a:Audience</XPath>
+        </Variable>
+        <Variable name="samlresp.id" type="string">
+            <XPath>/p:Response/@InResponseTo</XPath>
+        </Variable>
+    </XMLPayload>
+</ExtractVariables>

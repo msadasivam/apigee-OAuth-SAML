@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 enabled="true" continueOnError="false" async="false" name="RefreshAccessToken">
+    <Operation>RefreshAccessToken</Operation>
+    <ExpiresIn>1800000</ExpiresIn>
+    <!-- 3600000ms = 1 hour -->
+    <RefreshTokenExpiresIn>86400000</RefreshTokenExpiresIn>
+    <!--default value in milliseconds-->
+    <GenerateResponse enabled="true"/>
+</OAuthV2>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" mapIdentifier="SAMLConfig" enabled="true" name="KVMGetSAMLConfig">
+    <Get assignTo="samlinfo.ourdomain">
+        <Key>
+            <Parameter>domain</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="samlinfo.issuer">
+        <Key>
+            <Parameter>issuer</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="samlinfo.destination">
+        <Key>
+            <Parameter>destination</Parameter>
+        </Key>
+    </Get>
+    <ExpiryTimeInSecs>120</ExpiryTimeInSecs>
+    <Scope>environment</Scope>
+</KeyValueMapOperations>

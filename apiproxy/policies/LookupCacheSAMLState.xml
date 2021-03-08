@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LookupCache async="false" continueOnError="false" enabled="true" name="LookupCacheSAMLState">
+    <CacheKey>
+        <Prefix/>
+        <KeyFragment ref="samlresp.id"/>
+    </CacheKey>
+    <CacheResource>SAMLState</CacheResource>
+    <Scope>Application</Scope>
+    <AssignTo>samlresp.state</AssignTo>
+</LookupCache>

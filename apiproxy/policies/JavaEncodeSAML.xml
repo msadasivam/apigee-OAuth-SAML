@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<JavaCallout async="false" continueOnError="false" enabled="true" name="JavaEncodeSAML">
+    <Properties/>
+    <ClassName>com.apigee.edge.saml.EncodeSAML</ClassName>
+    <ResourceURL>java://EncodeSAML.jar</ResourceURL>
+</JavaCallout>

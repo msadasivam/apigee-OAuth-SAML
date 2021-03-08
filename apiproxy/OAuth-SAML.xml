@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="3" name="OAuth-SAML">
+    <Basepaths>/oauth20/v1</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1569904867363</CreatedAt>
+    <CreatedBy>user@example.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>OAuth-SAML</DisplayName>
+    <LastModifiedAt>1569904867363</LastModifiedAt>
+    <LastModifiedBy>user@example.com</LastModifiedBy>
+    <ManifestVersion>SHA-512:897bf886417f8d5b98fc84806a40d2d15f8ea1d5a7717a8b4c6b9768b8a27488253909ea0e3d435cedf95a8092a64c1b9de56168096f1c80899c27d567d95ddf</ManifestVersion>
+    <Policies>
+        <Policy>AssignAuthCodeAccessTokenResponse</Policy>
+        <Policy>AssignClientCredentialsAccessTokenResponse</Policy>
+        <Policy>AssignLoginRedirect</Policy>
+        <Policy>AssignRefreshTokenResponse</Policy>
+        <Policy>ExtractSAMLData</Policy>
+        <Policy>FaultInvalidRequest</Policy>
+        <Policy>FaultUnauthorized</Policy>
+        <Policy>GenerateAuthCodeAccessToken</Policy>
+        <Policy>GenerateAuthorizationCode</Policy>
+        <Policy>GenerateClientCredentialsAccessToken</Policy>
+        <Policy>GenerateImplicitAccessToken</Policy>
+        <Policy>JSDecodeSAML</Policy>
+        <Policy>JSIssueInstant</Policy>
+        <Policy>JSParseSAMLState</Policy>
+        <Policy>JSReqID</Policy>
+        <Policy>JavaEncodeSAML</Policy>
+        <Policy>KVMGetSAMLConfig</Policy>
+        <Policy>LookupCacheSAMLState</Policy>
+        <Policy>PopulateCacheSAMLState</Policy>
+        <Policy>Quota</Policy>
+        <Policy>RefreshAccessToken</Policy>
+        <Policy>SpikeArrest</Policy>
+        <Policy>ValidateSAML</Policy>
+        <Policy>VerifyClientID</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>OAuth20</ProxyEndpoint>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>java://EncodeSAML.jar</Resource>
+        <Resource>jsc://JSIssueInstant.js</Resource>
+        <Resource>jsc://JSParseSAMLState.js</Resource>
+        <Resource>jsc://JSReqID.js</Resource>
+        <Resource>jsc://base64.js</Resource>
+        <Resource>jsc://decodeSAML.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints/>
+</APIProxy>

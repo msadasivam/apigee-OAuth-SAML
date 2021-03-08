@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AssignAuthCodeAccessTokenResponse">
+    <DisplayName>AssignAuthCodeAccessTokenResponse</DisplayName>
+    <Set>
+        <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+            {
+                "access_token": "@oauthv2accesstoken.GenerateAuthCodeAccessToken.access_token#",
+                "refresh_token": "@oauthv2accesstoken.GenerateAuthCodeAccessToken.refresh_token#",
+                "scope": "@oauthv2accesstoken.GenerateAuthCodeAccessToken.scope#",
+                "access_token_expires_in": "@oauthv2accesstoken.GenerateAuthCodeAccessToken.expires_in#",
+                "refresh_token_expires_in": "@oauthv2accesstoken.GenerateAuthCodeAccessToken.refresh_token_expires_in#",
+                "refresh_count":"@oauthv2accesstoken.GenerateAuthCodeAccessToken.refresh_count#"
+            }
+        </Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <AssignTo createNew="true" transport="http" type="response"/>
+</AssignMessage>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>SpikeArrest</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <Flow name="callback">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>FaultUnauthorized</Name>
+                    <Condition>request.formparam.SAMLResponse = null or request.formparam.SAMLResponse = ""</Condition>
+                </Step>
+                <Step>
+                    <Name>JSDecodeSAML</Name>
+                </Step>
+                <Step>
+                    <Name>ValidateSAML</Name>
+                </Step>
+                <Step>
+                    <Name>KVMGetSAMLConfig</Name>
+                </Step>
+                <Step>
+                    <Name>FaultUnauthorized</Name>
+                    <Condition>saml.valid != true or saml.issuer != samlinfo.issuer</Condition>
+                </Step>
+                <Step>
+                    <Name>ExtractSAMLData</Name>
+                </Step>
+                <Step>
+                    <Name>FaultUnauthorized</Name>
+                    <Condition>samlresp.audience != samlinfo.ourdomain</Condition>
+                </Step>
+                <Step>
+                    <Name>LookupCacheSAMLState</Name>
+                </Step>
+                <Step>
+                    <Name>FaultUnauthorized</Name>
+                    <Condition>lookupcache.LookupCacheSAMLState.cachehit = false</Condition>
+                </Step>
+                <Step>
+                    <Name>JSParseSAMLState</Name>
+                </Step>
+                <Step>
+                    <Name>FaultInvalidRequest</Name>
+                    <Condition>authzparams.client_id = null</Condition>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>GenerateAuthorizationCode</Name>
+                    <Condition>authzparams.response_type = "code"</Condition>
+                </Step>
+                <Step>
+                    <Name>GenerateImplicitAccessToken</Name>
+                    <Condition>authzparams.response_type = "token"</Condition>
+                </Step>
+            </Response>
+            <Condition>proxy.pathsuffix MatchesPath "/callback" and request.verb = "POST"</Condition>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/saml</BasePath>
+        <Properties/>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="noroute"/>
+</ProxyEndpoint>

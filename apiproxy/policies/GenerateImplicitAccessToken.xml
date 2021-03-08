@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 async="false" continueOnError="false" enabled="true" name="GenerateImplicitAccessToken">
+    <Operation>GenerateAccessTokenImplicitGrant</Operation>
+    <ExpiresIn>1800000</ExpiresIn>
+    <ResponseType>authzparams.response_type</ResponseType>
+    <ClientId>authzparams.client_id</ClientId>
+    <Scope>authzparams.scope</Scope>
+    <State>authzparams.state</State>
+    <GenerateResponse enabled="true"/>
+</OAuthV2>

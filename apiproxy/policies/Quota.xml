@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Quota async="false" continueOnError="false" enabled="true" name="Quota">
+    <Interval>1</Interval>
+    <TimeUnit>hour</TimeUnit>
+    <Allow count="5000"/>
+    <Identifier ref="request.queryparam.client_id"/>
+    <Distributed>true</Distributed>
+    <Synchronous>false</Synchronous>
+    <AsynchronousConfiguration>
+        <SyncMessageCount>5</SyncMessageCount>
+    </AsynchronousConfiguration>
+</Quota>
