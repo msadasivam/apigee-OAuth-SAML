@@ -28,7 +28,7 @@ This achieves the same objective as [Using SAML Assertions as Authorization Gran
                 -u 'clientid:clientsecret' \
                 -H 'Content-Type: application/x-www-form-urlencoded' \
                 -d 'grant_type=authorization_code&code=authzcode&redirect_uri=https%3A%2F%2Fcode.example.com'
-     ```
+         ```
      - Implicit
          + Using a browser - https://org-env.apigee.net/oauth20/v1/authorize?client_id=cliendid&state=99999&response_type=token&redirect_uri=https%3A%2F%2Fcode.example.com
 
